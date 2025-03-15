@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import { memo } from "react";
 
@@ -14,10 +15,11 @@ type JourneyCard = {
   description: string;
   image?: ImageType;
   index: number;
+  priority?: boolean;
 };
 
 export const JourneyCard = memo(function JourneyCard(cardData: JourneyCard) {
-  const { title, description, image, index } = cardData;
+  const { title, description, image, index, priority } = cardData;
 
   return (
     <div className="word-break-word flex flex-col">
@@ -32,6 +34,7 @@ export const JourneyCard = memo(function JourneyCard(cardData: JourneyCard) {
             height={image.height}
             className="animate-reveal"
             loading={index < 1 ? "eager" : "lazy"}
+            priority={priority}
           />
         </div>
       )}

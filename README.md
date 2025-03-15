@@ -15,5 +15,6 @@ bun dev
 - [x] Selected on the sidebar
 - [x] Change favicon
 - [x] Change chrome tab name
-- [ ] Mobile dev
+- [x] Add drawer for mobile
 - [ ] Missing image for portfolio when done
+- [ ] Fix aria-hidden bug

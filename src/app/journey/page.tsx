@@ -78,7 +78,7 @@ const journeyData: YearLog[] = [
 ];
 
 export const metadata = {
-  title: 'Journey',
+  title: "Journey",
 };
 
 export default function Journey() {
@@ -107,7 +107,11 @@ export default function Journey() {
                     <div className="size-2 rounded-full bg-blue-600" />
                   </div>
                   <div className="grow pl-4 lg:pl-8">
-                    <JourneyCard index={logIndex} {...log} />
+                    <JourneyCard
+                      index={logIndex}
+                      {...log}
+                      priority={itemIndex === 0 && logIndex === 0}
+                    />
                   </div>
                 </div>
               ))}
