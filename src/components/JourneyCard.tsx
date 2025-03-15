@@ -2,23 +2,9 @@
 import Image from "next/image";
 import { memo } from "react";
 
-export type ImageType = {
-  width: number;
-  height: number;
-  url: string;
-  title?: string;
-  description?: string;
-};
+import { JourneyCardItem } from "@/lib/types";
 
-type JourneyCard = {
-  title: string;
-  description: string;
-  image?: ImageType;
-  index: number;
-  priority?: boolean;
-};
-
-export const JourneyCard = memo(function JourneyCard(cardData: JourneyCard) {
+export const JourneyCard = memo(function JourneyCard(cardData: JourneyCardItem) {
   const { title, description, image, index, priority } = cardData;
 
   return (

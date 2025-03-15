@@ -1,42 +1,9 @@
+import { STACK_ITEMS } from "@/lib/constants";
+import { StackItem } from "@/lib/types";
+
 export const metadata = {
-  title: 'Stack',
+  title: "Stack",
 };
-
-type StackItem = {
-  title: string;
-  url: string;
-  description: string;
-};
-
-const items: StackItem[] = [
-  {
-    title: "Tabby",
-    url: "https://tabby.sh/",
-    description:
-      "Infinitely customizable cross-platform terminal app for local shells, serial, SSH and Telnet connections.",
-  },
-  {
-    title: "Ulauncher",
-    url: "https://ulauncher.io/",
-    description: "Application launcher for Linux.",
-  },
-  {
-    title: "Raycast",
-    url: "https://www.raycast.com/",
-    description:
-      "Application laucher currenly only for macOS. Looking forward to use it on Windows.",
-  },
-  {
-    title: "Cursor",
-    url: "https://www.cursor.com/",
-    description: "Been trying cursor for personal projects and it's so good!",
-  },
-  {
-    title: "Notion",
-    url: "https://www.notion.com/",
-    description: "Everyone know this one! :)"
-  }
-];
 
 export default function Stack() {
   return (
@@ -47,7 +14,7 @@ export default function Stack() {
           Here is my go-to list of tools and software i use on a daily bases.
         </p>
         <ul className="mb-4 flex list-disc flex-col gap-0.5 pl-6 ">
-          {items.map((item: StackItem, idx: number) => {
+          {STACK_ITEMS.map((item: StackItem, idx: number) => {
             return (
               <li className="flex stack" key={idx}>
                 <a

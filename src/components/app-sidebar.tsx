@@ -1,16 +1,6 @@
 "use client";
-import {
-  Home,
-  Send,
-  Github,
-  Linkedin,
-  ArrowUpRight,
-  LucideIcon,
-  WandSparkles,
-  ScrollText,
-  Command
-} from "lucide-react";
-import Image from "next/image";
+import { ArrowUpRight, Command } from "lucide-react";
+import { memo } from "react";
 
 import {
   Sidebar,
@@ -25,66 +15,30 @@ import {
 } from "@/components/ui/sidebar";
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+import { BAR_ITEMS, SOCIALS } from "@/lib/constants";
 
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { memo } from "react";
-
-type SidebarMenuItem = {
-  title: string;
-  url: string;
-  icon: LucideIcon;
-};
-
-const items: SidebarMenuItem[] = [
-  {
-    title: "Home",
-    url: "/",
-    icon: Home,
-  },
-  {
-    title: "CV",
-    url: "cv",
-    icon: ScrollText,
-  },
-  {
-    title: "Journey",
-    url: "/journey",
-    icon: Send,
-  },
-  {
-    title: "Stack",
-    url: "/stack",
-    icon: WandSparkles,
-  },
-];
-
-const socialItems = [
-  {
-    title: "Github",
-    url: "https://github.com/TiagoRodrigues1",
-    icon: Github,
-  },
-  {
-    title: "LinkedIn",
-    url: "https://www.linkedin.com/in/josetiagorodrigues",
-    icon: Linkedin,
-  },
-];
 
 export const AppSidebar = memo(function AppSidebar() {
   const pathname: string = usePathname();
-  
+
   return (
     <>
       {/* Mobile Topbar with Drawer */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-10 shadow flex items-center justify-between pl-8 p-4">
         <Drawer>
           <DrawerTrigger asChild>
-            <button type="button" aria-label="Open menu" className="text-white font-xs">
-              <Command/>
+            <button
+              type="button"
+              aria-label="Open menu"
+              className="text-white font-xs"
+            >
+              <Command />
             </button>
           </DrawerTrigger>
-          <DrawerContent 
+          <DrawerContent
             className="p-0"
             role="dialog"
             aria-modal="true"
@@ -92,7 +46,8 @@ export const AppSidebar = memo(function AppSidebar() {
             aria-describedby="drawer-description"
           >
             <div id="drawer-description" className="sr-only">
-              Navigation menu containing links to different sections of the website and social media profiles
+              Navigation menu containing links to different sections of the
+              website and social media profiles
             </div>
             <div className="text-sm">
               <SidebarHeader>
@@ -115,15 +70,15 @@ export const AppSidebar = memo(function AppSidebar() {
                 <SidebarGroup>
                   <SidebarGroupContent>
                     <SidebarMenu>
-                      {items.map((item) => {
+                      {BAR_ITEMS.map((item) => {
                         const isActive = pathname === item.url;
                         return (
                           <SidebarMenuItem key={item.title}>
                             <SidebarMenuButton asChild isActive={isActive}>
-                              <a href={item.url}>
+                              <Link href={item.url}>
                                 <item.icon size={16} />
                                 <span>{item.title}</span>
-                              </a>
+                              </Link>
                             </SidebarMenuButton>
                           </SidebarMenuItem>
                         );
@@ -138,7 +93,7 @@ export const AppSidebar = memo(function AppSidebar() {
                   <SidebarGroupLabel>Social</SidebarGroupLabel>
                   <SidebarGroupContent>
                     <SidebarMenu>
-                      {socialItems.map((item) => (
+                      {SOCIALS.map((item) => (
                         <SidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
                             <a
@@ -163,9 +118,8 @@ export const AppSidebar = memo(function AppSidebar() {
           </DrawerContent>
         </Drawer>
       </div>
-
       {/* Desktop Sidebar */}
-      <div 
+      <div
         className="hidden md:block fixed top-0 left-0 h-full w-64 bg-white border-r"
         role="navigation"
       >
@@ -191,7 +145,7 @@ export const AppSidebar = memo(function AppSidebar() {
               <SidebarGroup>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {items.map((item) => {
+                    {BAR_ITEMS.map((item) => {
                       const isActive = pathname === item.url;
                       return (
                         <SidebarMenuItem key={item.title}>
@@ -214,7 +168,7 @@ export const AppSidebar = memo(function AppSidebar() {
                 <SidebarGroupLabel>Social</SidebarGroupLabel>
                 <SidebarGroupContent>
                   <SidebarMenu>
-                    {socialItems.map((item) => (
+                    {SOCIALS.map((item) => (
                       <SidebarMenuItem key={item.title}>
                         <SidebarMenuButton asChild>
                           <a
@@ -237,10 +191,7 @@ export const AppSidebar = memo(function AppSidebar() {
             </SidebarContent>
           </div>
         </Sidebar>
-      </div>
-
-      {/* Main Content */}
-      <div className="pt-16 md:pl-64">{/* Your main content goes here */}</div>
+      </div>{" "}
     </>
   );
 });

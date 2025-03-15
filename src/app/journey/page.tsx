@@ -1,81 +1,6 @@
 import { JourneyCard } from "@/components/JourneyCard";
-import { ImageType } from "@/components/JourneyCard";
-
-type YearLog = {
-  year: number;
-  logs: Log[];
-};
-
-type Log = {
-  title: string;
-  description: string;
-  image?: ImageType;
-};
-
-const journeyData: YearLog[] = [
-  {
-    year: 2025,
-    logs: [
-      {
-        title: "New UI for my portfolio",
-        description: "Gave it a new minimalist look, using mainly shadcn",
-      },
-    ],
-  },
-  {
-    year: 2024,
-    logs: [
-      {
-        title: "Went to Budapeste",
-        description: "Had lots of fun! 🇭🇺",
-        image: {
-          url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV22TEzV1voVw7hWFQzNXqevDfZ9BdiSjPkLxGY",
-          width: 620,
-          height: 620,
-          title: "budapeste parlament",
-        },
-      },
-      {
-        title: "Visited Milan",
-        description: "Frst time in Italy 🇮🇹",
-        image: {
-          url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV20bjLXJNIVc5x6Ny4zmOG8jwbJMgHPaBfrQud",
-          width: 620,
-          height: 620,
-          title: "Lago di como italy",
-        },
-      },
-    ],
-  },
-  {
-    year: 2021,
-    logs: [
-      {
-        title: "Joined Mobieum",
-        description: "First job after graduation, exited!",
-        image: {
-          url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV2brx02EwSHZgLePu6E8dRQ3mFqD0wiY4vXGkO",
-          width: 620,
-          height: 620,
-          title: "Mobileum logo",
-        },
-      },
-      {
-        title: "Graduates from University",
-        description: "3 years after, its done! :)",
-      },
-    ],
-  },
-  {
-    year: 2018,
-    logs: [
-      {
-        title: "Started at Universidade Fernando Pessoa",
-        description: "Feeling lucky to study Software Engineering",
-      },
-    ],
-  },
-];
+import { JOURNEY_ITEMS } from "@/lib/constants";
+import { YearLog } from "@/lib/types";
 
 export const metadata = {
   title: "Journey",
@@ -86,7 +11,7 @@ export default function Journey() {
     <div className="flex pt-20 pb-16 w-full h-full px-8">
       <div className="w-full max-w-4xl mx-auto">
         <h1 className="font-bold text-lg mb-8">Journey</h1>
-        {journeyData.map((yearLog: YearLog, itemIndex: number) => (
+        {JOURNEY_ITEMS.map((yearLog: YearLog, itemIndex: number) => (
           <div
             key={`data_${itemIndex}`}
             className="flex flex-col items-baseline gap-8 md:flex-row md:gap-12 mb-6"
