@@ -7,6 +7,7 @@ import {
   ArrowUpRight,
   LucideIcon,
   WandSparkles,
+  ScrollText
 } from "lucide-react";
 import Image from "next/image";
 
@@ -36,6 +37,11 @@ const items: SidebarMenuItem[] = [
     title: "Home",
     url: "/",
     icon: Home,
+  },
+  {
+    title: "CV",
+    url: "cv",
+    icon: ScrollText
   },
   {
     title: "Journey",

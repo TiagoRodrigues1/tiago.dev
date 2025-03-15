@@ -15,5 +15,5 @@ bun dev
 - [x] Selected on the sidebar
 - [x] Change favicon
 - [x] Change chrome tab name
-- [] Mobile dev
-- [] Missing image for portfolio when done
+- [ ] Mobile dev
+- [ ] Missing image for portfolio when done
