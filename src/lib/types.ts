@@ -47,3 +47,9 @@ export type JourneyCardItem = {
   index: number;
   priority?: boolean;
 };
+
+export type BookmarkCollection = {
+  items: [];
+  _id: number;
+  title: string;
+};

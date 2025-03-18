@@ -11,7 +11,7 @@ export default function Stack() {
       <div className="w-full max-w-4xl mx-auto">
         <h1 className="font-bold mb-8 text-2xl">Stack</h1>
         <p>
-          Here is my go-to list of tools and software i use on a daily bases.
+          Here is my go-to list of tools and software I use on a daily bases.
         </p>
         <ul className="mb-4 flex list-disc flex-col gap-0.5 pl-6 ">
           {STACK_ITEMS.map((item: StackItem, idx: number) => {

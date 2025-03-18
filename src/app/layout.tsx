@@ -29,11 +29,11 @@ export default function RootLayout({
   return (
     <html lang="en" data-theme="dark">
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-sidebar`}
+        className={`${GeistSans.variable} ${GeistMono.variable} antialiased bg-sidebar min-h-full h-full`}
       >
         <SidebarProvider className="flex h-full w-full">
           <AppSidebar />
-          <main className="flex-1 h-full">{children}</main>
+          <main className="flex-1 h-full min-h-screen ">{children}</main>
         </SidebarProvider>
       </body>
     </html>

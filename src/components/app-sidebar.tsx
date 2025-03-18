@@ -51,7 +51,7 @@ export const AppSidebar = memo(function AppSidebar() {
             </div>
             <div className="text-sm">
               <SidebarHeader>
-                <div className="inline-flex gap-4 p-4">
+                <div className="inline-flex gap-4">
                   <Image
                     height={40}
                     width={40}
@@ -120,13 +120,13 @@ export const AppSidebar = memo(function AppSidebar() {
       </div>
       {/* Desktop Sidebar */}
       <div
-        className="hidden md:block fixed top-0 left-0 h-full w-64 bg-white border-r"
+        className="hidden md:block w-64 bg-white border-r"
         role="navigation"
       >
         <Sidebar>
           <div className="text-sm">
             <SidebarHeader>
-              <div className="inline-flex gap-4 p-4">
+              <div className="inline-flex gap-4">
                 <Image
                   height={40}
                   width={40}

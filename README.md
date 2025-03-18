@@ -20,3 +20,4 @@ bun dev
 - [ ] Fix aria-hidden bug
 - [ ] Bookmarks
 - [x] Put all data in a data file
+- [x] fix weird bug when resizing
