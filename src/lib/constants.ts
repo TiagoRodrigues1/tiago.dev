@@ -5,7 +5,7 @@ import {
   Linkedin,
   WandSparkles,
   ScrollText,
-  Bookmark
+  Bookmark,
 } from "lucide-react";
 
 import { Job, SidebarMenuItem, StackItem, YearLog } from "@/lib/types";
@@ -30,11 +30,12 @@ export const BAR_ITEMS: SidebarMenuItem[] = [
     title: "Stack",
     url: "/stack",
     icon: WandSparkles,
-  }, {
-  title: "Bookmarks",
-  url: "/bookmarks",
-  icon: Bookmark,
-}
+  },
+  {
+    title: "Bookmarks",
+    url: "/bookmarks",
+    icon: Bookmark,
+  },
 ];
 
 export const SOCIALS: SidebarMenuItem[] = [
