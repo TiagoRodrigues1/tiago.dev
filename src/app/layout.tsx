@@ -9,12 +9,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost'),
+  metadataBase: new URL("http://localhost"),
   title: {
-    template: '%s | Tiago Rodrigues',
-    default: 'Tiago Rodrigues',
+    template: "%s | Tiago Rodrigues",
+    default: "Tiago Rodrigues",
   },
-  description: 'Personal website of Tiago Rodrigues',
+  description: "Personal website of Tiago Rodrigues",
   robots: {
     index: true,
     follow: true,

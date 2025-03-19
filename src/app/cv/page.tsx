@@ -13,8 +13,8 @@ export default function CV() {
         {JOBS.map((job: Job, index) => {
           return (
             <div key={`${job.role}-${index}`}>
-              <span className="font-bold mb-1">{job.role}</span>
-              <p>
+              <span className="font-bold mb-1 text-[var(--color-white)]">{job.role}</span>
+              <p className="text-[var(--color-white)]">
                 {job.startDate}{" "}
                 {job.endDate ? ` — ${job.endDate}` : " — Present"}
               </p>

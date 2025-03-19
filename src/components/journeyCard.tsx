@@ -9,8 +9,8 @@ export const JourneyCard = memo(function JourneyCard(cardData: JourneyCardItem) 
 
   return (
     <div className="word-break-word flex flex-col">
-      <span className="mb-px font-semibold tracking-tight">{title}</span>
-      <span className="text-sm">{description}</span>
+      <span className="mb-px font-semibold tracking-tight text-[var(--color-white)]">{title}</span>
+      <span className="text-sm text-[var(--color-white)]">{description}</span>
       {image && image.url && (
         <div className="mt-2.5 overflow-hidden rounded-xl bg-white">
           <Image

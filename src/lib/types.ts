@@ -48,8 +48,14 @@ export type JourneyCardItem = {
   priority?: boolean;
 };
 
+export type BookmarkObject = {
+  items: BookmarkCollection[];
+  result: boolean;
+};
+
 export type BookmarkCollection = {
-  items: [];
   _id: number;
   title: string;
+  slug: string;
+  count: number;
 };

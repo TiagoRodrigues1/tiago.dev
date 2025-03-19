@@ -146,6 +146,7 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+    --white: oklch(0.985 0.001 100);
   }
 
   .dark {
@@ -162,13 +163,12 @@
 
 p {
   margin-bottom: calc(var(--spacing) * 6);
-  color: #fbfbfa;
 }
 
 h1,
 h2,
-span,
-li {
+li,
+h4 {
   color: #fbfbfa;
 }
 
@@ -203,4 +203,8 @@ li {
 
 .animate-reveal {
   animation: var(--animate-reveal);
+}
+
+@utility scrollable-area {
+  @apply h-full max-h-dvh min-h-dvh overflow-x-hidden overflow-y-auto;
 }

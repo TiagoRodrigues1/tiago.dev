@@ -10,7 +10,7 @@ export default function Stack() {
     <div className="flex pt-20 pb-16 w-full h-full px-8">
       <div className="w-full max-w-4xl mx-auto">
         <h1 className="font-bold mb-8 text-2xl">Stack</h1>
-        <p>
+        <p className="text-[var(--color-white)]">
           Here is my go-to list of tools and software I use on a daily bases.
         </p>
         <ul className="mb-4 flex list-disc flex-col gap-0.5 pl-6 ">

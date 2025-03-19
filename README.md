@@ -21,3 +21,6 @@ bun dev
 - [ ] Bookmarks
 - [x] Put all data in a data file
 - [x] fix weird bug when resizing
+- [ ] add suspense from react to loading mask
+- [ ] SEO
+- [ ] Make app be a slug instead of redireting everytime
