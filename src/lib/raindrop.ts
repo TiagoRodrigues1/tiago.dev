@@ -1,6 +1,6 @@
 import "server-only";
 import { config } from "@/lib/config";
-import { BookmarkCollection, BookmarkObject } from "@/lib/types";
+import { BookmarkCollection, BookmarkObject, Bookmarks } from "@/lib/types";
 
 const options = {
   method: "GET",
@@ -16,7 +16,10 @@ const options = {
 
 const RAINDROP_API_URL = "https://api.raindrop.io/rest/v1";
 
-export const getBookmarkItems = async (id: string, pageIndex: number = 0) => {
+export const getBookmarkItems = async (
+  id: number,
+  pageIndex: number = 0
+): Promise<Bookmarks> => {
   if (!id) throw new Error("Bookmark ID is required!");
 
   try {
@@ -33,7 +36,7 @@ export const getBookmarkItems = async (id: string, pageIndex: number = 0) => {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const data: Bookmarks = await response.json();
     return data;
   } catch (error) {
     console.error("Error fetching bookmarks:", error);

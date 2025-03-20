@@ -146,7 +146,7 @@
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-    --white: oklch(0.985 0.001 100);
+    --white: #fafaf9;
   }
 
   .dark {
@@ -207,4 +207,12 @@ h4 {
 
 @utility scrollable-area {
   @apply h-full max-h-dvh min-h-dvh overflow-x-hidden overflow-y-auto;
+}
+
+@utility bg-grid {
+  @apply bg-[#08080b] bg-[linear-gradient(to_right,#262626_1px,transparent_1px),linear-gradient(to_bottom,#262626_1px,transparent_1px)] bg-[size:24px_24px];
+}
+
+@utility text-white {
+  @apply text-[#fafaf9];
 }

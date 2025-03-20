@@ -51,11 +51,28 @@ export type JourneyCardItem = {
 export type BookmarkObject = {
   items: BookmarkCollection[];
   result: boolean;
+  count?: number;
 };
 
 export type BookmarkCollection = {
   _id: number;
   title: string;
   slug: string;
+  count: number;
+};
+
+export type Bookmark = {
+  cover: string;
+  link: string;
+  title: string;
+  excerpt: string;
+  _id: number;
+  note?: string;
+  domain: string;
+};
+
+export type Bookmarks = {
+  items: Bookmark[];
+  result: boolean;
   count: number;
 };

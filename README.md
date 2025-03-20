@@ -24,3 +24,4 @@ bun dev
 - [ ] add suspense from react to loading mask
 - [ ] SEO
 - [ ] Make app be a slug instead of redireting everytime
+- [x] Make Bookmark list component
