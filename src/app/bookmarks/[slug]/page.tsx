@@ -1,8 +1,7 @@
 import { BookmarkList } from "@/components/bookmark-list";
 import { LoadingSpinner } from "@/components/loading-spinner";
 import { getBookmarkItems, getBookmarks } from "@/lib/raindrop";
-import { BookmarkCollection } from "@/lib/types";
-import { sortByProperty } from "@/lib/utils";
+import { BookmarkCollection, Metadata } from "@/lib/types";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 
 import { notFound } from "next/navigation";
@@ -56,4 +55,18 @@ export default async function CollectionPage(props: CollectionPageProps) {
       </div>
     </ScrollArea>
   );
+}
+
+export async function generateMetadata(props: Metadata) {
+  const params = await props.params;
+  const { slug } = params;
+
+  const bookmarks = await getBookmarks();
+  const currentBookmark = bookmarks.find((bookmark) => bookmark.slug === slug);
+
+  if (!currentBookmark) return null;
+
+  return {
+    title: `${currentBookmark.title} | Bookmarks`,
+  };
 }

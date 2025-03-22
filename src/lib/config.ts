@@ -7,5 +7,3 @@ export const config = {
     accessToken: process.env.NEXT_PUBLIC_RAINDROP_ACCESS_TOKEN,
   },
 } as const;
-
-console.log("env " + process.env);

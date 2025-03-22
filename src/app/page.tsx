@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Home | Tiago Rodrigues",
+  title: "Home - Tiago Rodrigues",
 };
 
 export default function Home() {

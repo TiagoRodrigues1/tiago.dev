@@ -31,3 +31,4 @@ bun dev
 - [x] SideBar style selected should be white
 - [x] Change the color of the selected text
 - [ ] maybe skeleton in the bookmark list
+- [ ] add the submit form on the bookmarks

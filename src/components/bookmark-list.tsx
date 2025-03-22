@@ -16,7 +16,6 @@ type BookmarkListProps = {
 
 export const BookmarkList = (props: BookmarkListProps) => {
   const { initialData, id } = props;
-  console.log(initialData);
 
   const [data, setData] = useState(
     initialData?.result ? initialData?.items : []
@@ -61,9 +60,7 @@ export const BookmarkList = (props: BookmarkListProps) => {
 
   return (
     <div>
-      <div className="grid grid-cols-2 gap-4">
-        {memoizedBookmarks}
-      </div>
+      <div className="grid grid-cols-2 gap-4">{memoizedBookmarks}</div>
 
       {data.length > 0 ? (
         <div className="mt-8 flex min-h-16 items-center justify-center text-sm lg:mt-12">

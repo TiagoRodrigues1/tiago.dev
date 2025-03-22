@@ -11,7 +11,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL("http://localhost"),
   title: {
-    template: "%s | Tiago Rodrigues",
+    template: "%s - Tiago Rodrigues",
     default: "Tiago Rodrigues",
   },
   description: "Personal website of Tiago Rodrigues",
