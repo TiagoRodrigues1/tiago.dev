@@ -44,20 +44,6 @@ export const BookmarkList = (props: BookmarkListProps) => {
     if (pageIndex > 0) fetchInfiniteData();
   }, [pageIndex, fetchInfiniteData]);
 
-  const getChunks = useCallback(() => {
-    const firstChunk: Bookmark[] = [];
-    const lastChunk: Bookmark[] = [];
-
-    data.forEach((element, index) => {
-      if (index % 2 === 0) firstChunk.push(element);
-      else lastChunk.push(element);
-    });
-
-    return [firstChunk, lastChunk];
-  }, [data]);
-
-  const chunks = useMemo(() => getChunks(), [getChunks]);
-
   const memoizedBookmarks = useMemo(
     () => {
       return data.map((bookmark: Bookmark, bookmarkIndex: number) => (
@@ -73,25 +59,10 @@ export const BookmarkList = (props: BookmarkListProps) => {
     [data] /* add tweets*/
   );
 
-  const memoizedChunks = useMemo(() => {
-    return chunks.map((chunk: Bookmark[], chunkIndex) => (
-      <div key={`chunk_${chunkIndex}`} className={cn("grid gap-4")}>
-        {chunk.map((bookmark: Bookmark, bookmarkIndex: number) => (
-          <BookmarkCard
-            key={bookmark._id}
-            bookmark={bookmark}
-            order={bookmarkIndex}
-          />
-        ))}
-      </div>
-    ));
-  }, [chunks]);
-
   return (
     <div>
-      <div className="flex flex-col gap-4 @lg:hidden">{memoizedBookmarks}</div>
-      <div className="hidden @lg:grid @lg:grid-col-2 @lg:gap-4">
-        {memoizedChunks}
+      <div className="grid grid-cols-2 gap-4">
+        {memoizedBookmarks}
       </div>
 
       {data.length > 0 ? (

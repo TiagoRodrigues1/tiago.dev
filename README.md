@@ -25,3 +25,5 @@ bun dev
 - [ ] SEO
 - [ ] Make app be a slug instead of redireting everytime
 - [x] Make Bookmark list component
+- [x] Make cards smaller
+- [ ] Bookmarks page in mobile should show the bookmarks bar

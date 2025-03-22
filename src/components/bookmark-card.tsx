@@ -16,9 +16,9 @@ export default function BookmarkCard(props: BookmarkCardProps) {
       target="_blank"
       rel="noopener noreferrer"
       data-bookmark-order={order}
-      className="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-4 overflow-hidden rounded-xl bg-sidebar p-4 transition-colors duration-300 hover:bg-[var(--sidebar-accent)]"
+      className="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-2 overflow-hidden rounded-xl bg-sidebar p-4 transition-colors duration-300 hover:bg-[var(--sidebar-accent)]"
     >
-      <span className="aspect-1200/630 overflow-hidden rounded-lg">
+      <span className="aspect-video overflow-hidden rounded-lg">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={cover}
@@ -27,7 +27,7 @@ export default function BookmarkCard(props: BookmarkCardProps) {
           height={630}
           loading={order < 2 ? "eager" : "lazy"}
           data-pin-nopin="true"
-          className="animate-reveal"
+          className="animate-reveal h-full w-full object-cover"
         />
       </span>
       <div className="flex flex-col gap-1">
