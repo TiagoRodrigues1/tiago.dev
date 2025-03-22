@@ -6,6 +6,7 @@ import { Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { ListItem } from "@/components/list-item";
+import { LoadingSpinner } from "@/components/loading-spinner";
 
 async function fetchData() {
   const bookmarks: BookmarkCollection[] = await getBookmarks();
@@ -31,18 +32,18 @@ export default async function BookmarksLayout({
                 <Send /> Submit
               </Button>
             </div>
-            <Suspense fallback={<div>LOADING</div>}>
-            <div className="flex flex-col gap-1 text-sm">
-              {bookmarks?.map((bookmark: BookmarkCollection) => {
-                return (
-                  <ListItem
-                    title={bookmark.title}
-                    description={`${bookmark.count} bookmarks`}
-                    key={bookmark._id}
-                    path={`/bookmarks/${bookmark.slug}`}
-                  />
-                );
-              })}
+            <Suspense fallback={<LoadingSpinner />}>
+              <div className="flex flex-col gap-1 text-sm">
+                {bookmarks?.map((bookmark: BookmarkCollection) => {
+                  return (
+                    <ListItem
+                      title={bookmark.title}
+                      description={`${bookmark.count} bookmarks`}
+                      key={bookmark._id}
+                      path={`/bookmarks/${bookmark.slug}`}
+                    />
+                  );
+                })}
               </div>
             </Suspense>
           </div>

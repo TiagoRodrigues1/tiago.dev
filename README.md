@@ -21,7 +21,7 @@ bun dev
 - [x] Bookmarks
 - [x] Put all data in a data file
 - [x] fix weird bug when resizing
-- [ ] add suspense from react to loading mask
+- [x] add suspense from react to loading mask
 - [ ] SEO
 - [ ] Make app be a slug instead of redireting everytime
 - [x] Make Bookmark list component
@@ -30,3 +30,4 @@ bun dev
 - [ ] Fix weird bug, not being able to select bookmarks on side bar
 - [x] SideBar style selected should be white
 - [x] Change the color of the selected text
+- [ ] maybe skeleton in the bookmark list

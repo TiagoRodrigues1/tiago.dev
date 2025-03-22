@@ -1,4 +1,5 @@
 import { BookmarkList } from "@/components/bookmark-list";
+import { LoadingSpinner } from "@/components/loading-spinner";
 import { getBookmarkItems, getBookmarks } from "@/lib/raindrop";
 import { BookmarkCollection } from "@/lib/types";
 import { sortByProperty } from "@/lib/utils";
@@ -22,10 +23,9 @@ async function fetchData(slug: string) {
     notFound();
   }
 
-  const sortedBOokmarks = sortByProperty(bookmarks, "title");
   const bookmarkItems = await getBookmarkItems(currentBookmark._id);
 
-  return { bookmarks: sortedBOokmarks, bookmarkItems, currentBookmark };
+  return { bookmarkItems, currentBookmark };
 }
 
 type CollectionPageProps = {
@@ -36,16 +36,21 @@ export default async function CollectionPage(props: CollectionPageProps) {
   const params = await props.params;
   const { slug } = params;
 
-  const { /*bookmars, */ bookmarkItems, currentBookmark } = await fetchData(slug);
+  const { bookmarkItems, currentBookmark } = await fetchData(slug);
 
   return (
     <ScrollArea className="bg-grid">
       <div className="flex pt-20 pb-16 w-full h-full px-8">
         <div className="w-full max-w-4xl mx-auto">
-          <h1 className="text-[24px] font-bold mb-6">{currentBookmark.title}</h1>
+          <h1 className="text-[24px] font-bold mb-6">
+            {currentBookmark.title}
+          </h1>
 
-          <Suspense fallback={<div>LOADING</div>}>
-            <BookmarkList id={currentBookmark._id} initialData={bookmarkItems} />
+          <Suspense fallback={<LoadingSpinner />}>
+            <BookmarkList
+              id={currentBookmark._id}
+              initialData={bookmarkItems}
+            />
           </Suspense>
         </div>
       </div>
