@@ -18,7 +18,7 @@ bun dev
 - [x] Add drawer for mobile
 - [ ] Missing image for portfolio when done
 - [ ] Fix aria-hidden bug
-- [ ] Bookmarks
+- [x] Bookmarks
 - [x] Put all data in a data file
 - [x] fix weird bug when resizing
 - [ ] add suspense from react to loading mask
@@ -27,3 +27,5 @@ bun dev
 - [x] Make Bookmark list component
 - [x] Make cards smaller
 - [ ] Bookmarks page in mobile should show the bookmarks bar
+- [ ] Fix weird bug, not being able to select bookmarks on side bar
+- [x] SideBar style selected should be white

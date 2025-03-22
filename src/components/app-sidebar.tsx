@@ -88,7 +88,6 @@ export const AppSidebar = memo(function AppSidebar() {
                 </SidebarGroup>
 
                 <div className="h-px bg-sidebar-border mx-2" />
-
                 <SidebarGroup>
                   <SidebarGroupLabel>Social</SidebarGroupLabel>
                   <SidebarGroupContent>
