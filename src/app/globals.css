@@ -216,3 +216,8 @@ h4 {
 @utility text-white {
   @apply text-[#fafaf9];
 }
+
+::selection {
+  background-color: #fafaf9; /* Change the background color of selected text */
+  color: black; /* Change the color of the selected text */
+}

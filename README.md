@@ -29,3 +29,4 @@ bun dev
 - [ ] Bookmarks page in mobile should show the bookmarks bar
 - [ ] Fix weird bug, not being able to select bookmarks on side bar
 - [x] SideBar style selected should be white
+- [x] Change the color of the selected text

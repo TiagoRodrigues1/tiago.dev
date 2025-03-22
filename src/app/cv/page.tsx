@@ -31,7 +31,7 @@ export default function CV() {
                   );
                 })}
               </ul>
-              <span className="font-bold">
+              <span className="font-bold text-[var(--color-white)]">
                 Stack: {job.technologies.join(", ")}
               </span>
             </div>
