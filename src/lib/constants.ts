@@ -180,3 +180,10 @@ export const JOURNEY_ITEMS: YearLog[] = [
     ],
   },
 ];
+
+export const SUMBIT_FORM_URL = "Website URL";
+export const SUMBIT_FORM_EMAIL = "Email";
+export const SUMBIT_FORM_TYPE = "Type";
+export const SUBMIT_FORM_TILTE = "Submit a bookmark";
+export const SUBMIT_FORM_DESCRIPTION =
+  "Send a website, or something you like if I like it, I'll add it here. Please don't submit more than 5 a day.";

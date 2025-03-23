@@ -23,7 +23,7 @@ bun dev
 - [x] fix weird bug when resizing
 - [x] add suspense from react to loading mask
 - [ ] SEO
-- [ ] Make app be a slug instead of redireting everytime
+- [ ] Make app be a slug instead of redireting everytime ? 
 - [x] Make Bookmark list component
 - [x] Make cards smaller
 - [ ] Bookmarks page in mobile should show the bookmarks bar
@@ -31,4 +31,6 @@ bun dev
 - [x] SideBar style selected should be white
 - [x] Change the color of the selected text
 - [ ] maybe skeleton in the bookmark list
-- [ ] add the submit form on the bookmarks
+- [x] add the submit form on the bookmarks
+- [ ] Fix bug that is showing the submit bookmark button while loading bookmarks
+- [ ] Make logic for the submit of the bookmarks (mb need be)
