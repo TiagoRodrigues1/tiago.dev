@@ -11,7 +11,7 @@ import {
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
-  SidebarMenuItem,
+  MemoizedSidebarMenuItem,
 } from "@/components/ui/sidebar";
 
 import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
@@ -73,14 +73,14 @@ export const AppSidebar = memo(function AppSidebar() {
                       {BAR_ITEMS.map((item) => {
                         const isActive = pathname === item.url;
                         return (
-                          <SidebarMenuItem key={item.title}>
+                          <MemoizedSidebarMenuItem key={item.title}>
                             <SidebarMenuButton asChild isActive={isActive}>
                               <Link href={item.url}>
                                 <item.icon size={16} />
                                 <span>{item.title}</span>
                               </Link>
                             </SidebarMenuButton>
-                          </SidebarMenuItem>
+                          </MemoizedSidebarMenuItem>
                         );
                       })}
                     </SidebarMenu>
@@ -93,7 +93,7 @@ export const AppSidebar = memo(function AppSidebar() {
                   <SidebarGroupContent>
                     <SidebarMenu>
                       {SOCIALS.map((item) => (
-                        <SidebarMenuItem key={item.title}>
+                        <MemoizedSidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild>
                             <a
                               href={item.url}
@@ -107,7 +107,7 @@ export const AppSidebar = memo(function AppSidebar() {
                               <ArrowUpRight size={16} />
                             </a>
                           </SidebarMenuButton>
-                        </SidebarMenuItem>
+                        </MemoizedSidebarMenuItem>
                       ))}
                     </SidebarMenu>
                   </SidebarGroupContent>
@@ -147,14 +147,14 @@ export const AppSidebar = memo(function AppSidebar() {
                     {BAR_ITEMS.map((item) => {
                       const isActive = pathname === item.url;
                       return (
-                        <SidebarMenuItem key={item.title}>
+                        <MemoizedSidebarMenuItem key={item.title}>
                           <SidebarMenuButton asChild isActive={isActive}>
                             <a href={item.url}>
                               <item.icon size={16} />
                               <span>{item.title}</span>
                             </a>
                           </SidebarMenuButton>
-                        </SidebarMenuItem>
+                        </MemoizedSidebarMenuItem>
                       );
                     })}
                   </SidebarMenu>
@@ -168,7 +168,7 @@ export const AppSidebar = memo(function AppSidebar() {
                 <SidebarGroupContent>
                   <SidebarMenu>
                     {SOCIALS.map((item) => (
-                      <SidebarMenuItem key={item.title}>
+                      <MemoizedSidebarMenuItem key={item.title}>
                         <SidebarMenuButton asChild>
                           <a
                             href={item.url}
@@ -182,7 +182,7 @@ export const AppSidebar = memo(function AppSidebar() {
                             <ArrowUpRight size={16} />
                           </a>
                         </SidebarMenuButton>
-                      </SidebarMenuItem>
+                      </MemoizedSidebarMenuItem>
                     ))}
                   </SidebarMenu>
                 </SidebarGroupContent>

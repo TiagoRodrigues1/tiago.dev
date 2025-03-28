@@ -70,7 +70,7 @@ export const SubmitBookmarkForm = memo((props: SubmitFormProps) => {
       setFormOpen(false);
       alert("submited");
     },
-    [form, setFormOpen]
+    [setFormOpen]
   );
 
   const renderUrlField = useCallback(

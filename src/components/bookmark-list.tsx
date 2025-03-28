@@ -46,7 +46,7 @@ export const BookmarkList = (props: BookmarkListProps) => {
   const memoizedBookmarks = useMemo(
     () => {
       return data.map((bookmark: Bookmark, bookmarkIndex: number) => (
-        <div key={`bookmark${bookmarkIndex}`} className={cn("grid gap-4")}>
+        <div key={`bookmark${bookmarkIndex}${bookmark.title}`} className={cn("grid gap-4")}>
           <BookmarkCard
             key={bookmark._id}
             bookmark={bookmark}
@@ -55,7 +55,7 @@ export const BookmarkList = (props: BookmarkListProps) => {
         </div>
       ));
     },
-    [data] /* add tweets*/
+    [data] /* TODO add tweets*/
   );
 
   return (
@@ -69,12 +69,9 @@ export const BookmarkList = (props: BookmarkListProps) => {
               {isLoading ? (
                 <div
                   className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent text-black"
-                  role="status"
                   aria-label="loading"
                 >
-                  <span className="sr-only text-[var(--color-white)]">
-                    Loading...
-                  </span>
+                  <output className="sr-only">Loading...</output>
                 </div>
               ) : (
                 <Button
