@@ -88,7 +88,7 @@ export const JOBS: Job[] = [
     endDate: undefined,
     role: "Software Engineer @ Mobileum",
     achievments: [
-      "Migrated legacy JavaScript modules from NPM 12 to NPM 20+ and upgraded Webpack to version 5, ensuring better performance and maintainability.",
+      "Migrated legacy JavaScript modules from node 12 to node 20+ and upgraded Webpack to version 5, ensuring better performance and maintainability.",
       "Integrated the front-end team for 1 year where I contributed to a complete front-end overhaul using React, improving UI performance by 40%, reducing issues by 10%, and delivering a cleaner, more modern user experience.",
       "Implemented a key-value store feature for efficient data distribution across multiple instances while optimizing resource sharing.",
       "Designed a real-time event processing system using an H2 database for rapid storage, transformation, and analytics.",
@@ -133,10 +133,10 @@ export const JOURNEY_ITEMS: YearLog[] = [
         title: "Went to Budapeste",
         description: "Had lots of fun! 🇭🇺",
         image: {
-          url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV22TEzV1voVw7hWFQzNXqevDfZ9BdiSjPkLxGY",
+          url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV222BCx6voVw7hWFQzNXqevDfZ9BdiSjPkLxGY",
           width: 620,
           height: 620,
-          title: "budapeste parlament",
+          title: "budapeste parlament"
         },
       },
       {

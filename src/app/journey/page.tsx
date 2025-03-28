@@ -13,7 +13,7 @@ export default function Journey() {
         <h1 className="font-bold text-lg mb-8">Journey</h1>
         {JOURNEY_ITEMS.map((yearLog: YearLog, itemIndex: number) => (
           <div
-            key={`data_${itemIndex}`}
+            key={`data_${itemIndex}${yearLog.logs[0].title}`}
             className="flex flex-col items-baseline gap-8 md:flex-row md:gap-12 mb-6"
           >
             <h2 className="w-16">{yearLog.year}</h2>

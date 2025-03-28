@@ -118,10 +118,7 @@ export const AppSidebar = memo(function AppSidebar() {
         </Drawer>
       </div>
       {/* Desktop Sidebar */}
-      <div
-        className="hidden md:block w-64 bg-white border-r"
-        role="navigation"
-      >
+      <nav className="hidden md:block w-64 bg-white border-r">
         <Sidebar>
           <div className="text-sm">
             <SidebarHeader>
@@ -190,7 +187,7 @@ export const AppSidebar = memo(function AppSidebar() {
             </SidebarContent>
           </div>
         </Sidebar>
-      </div>{" "}
+      </nav>
     </>
   );
 });

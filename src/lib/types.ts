@@ -38,6 +38,7 @@ export type ImageType = {
   url: string;
   title?: string;
   description?: string;
+  priority?: boolean;
 };
 
 export type JourneyCardItem = {

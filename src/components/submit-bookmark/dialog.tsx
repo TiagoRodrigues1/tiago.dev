@@ -1,9 +1,7 @@
 "use client";
 
 import { Suspense, useState } from "react";
-import React from "react";
 
-import { useMediaQuery } from "usehooks-ts";
 import { Button } from "@/components/ui/button";
 import { Send } from "lucide-react";
 import {

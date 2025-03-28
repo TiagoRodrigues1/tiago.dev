@@ -1,4 +1,4 @@
-import { SpeedInsights } from '@vercel/speed-insights/next'
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 import { SidebarProvider } from "@/components/ui/sidebar";
 import { AppSidebar } from "@/components/app-sidebar";
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 }) {
   return (
     <html lang="en" data-theme="dark">
@@ -37,7 +37,7 @@ export default function RootLayout({
           <AppSidebar />
           <main className="flex-1 h-full min-h-screen ">{children}</main>
         </SidebarProvider>
-        <SpeedInsights/>
+        <SpeedInsights />
       </body>
     </html>
   );

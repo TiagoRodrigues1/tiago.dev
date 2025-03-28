@@ -17,20 +17,21 @@ bun dev
 - [x] Change chrome tab name
 - [x] Add drawer for mobile
 - [ ] Missing image for portfolio when done
-- [ ] Fix aria-hidden bug
+- [x] Fix aria-hidden bug
 - [x] Bookmarks
 - [x] Put all data in a data file
 - [x] fix weird bug when resizing
 - [x] add suspense from react to loading mask
 - [ ] SEO
-- [ ] Make app be a slug instead of redireting everytime ? 
+- [?] Make app be a slug instead of redireting everytime - Dont think its possible
 - [x] Make Bookmark list component
 - [x] Make cards smaller
 - [ ] Bookmarks page in mobile should show the bookmarks bar
-- [ ] Fix weird bug, not being able to select bookmarks on side bar
+- [x] Fix weird bug, not being able to select bookmarks on side bar
 - [x] SideBar style selected should be white
 - [x] Change the color of the selected text
 - [ ] maybe skeleton in the bookmark list
 - [x] add the submit form on the bookmarks
-- [ ] Fix bug that is showing the submit bookmark button while loading bookmarks
+- [x] Fix bug that is showing the submit bookmark button while loading bookmarks
 - [ ] Make logic for the submit of the bookmarks (mb need be)
+- [ ] Check the images, warning (priority)
