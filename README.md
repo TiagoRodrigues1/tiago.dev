@@ -26,7 +26,7 @@ bun dev
 - [?] Make app be a slug instead of redireting everytime - Dont think its possible
 - [x] Make Bookmark list component
 - [x] Make cards smaller
-- [ ] Bookmarks page in mobile should show the bookmarks bar
+- [x] Bookmarks page in mobile should show the bookmarks bar
 - [x] Fix weird bug, not being able to select bookmarks on side bar
 - [x] SideBar style selected should be white
 - [x] Change the color of the selected text

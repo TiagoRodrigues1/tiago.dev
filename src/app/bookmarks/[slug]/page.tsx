@@ -28,7 +28,7 @@ async function fetchData(slug: string) {
 }
 
 type CollectionPageProps = {
-  params: Promise<{ slug: string }>;
+  readonly params: Promise<{ slug: string }>;
 };
 
 export default async function CollectionPage(props: CollectionPageProps) {
@@ -38,7 +38,7 @@ export default async function CollectionPage(props: CollectionPageProps) {
   const { bookmarkItems, currentBookmark } = await fetchData(slug);
 
   return (
-    <ScrollArea className="bg-grid">
+    <ScrollArea className="bg-grid h-full">
       <div className="flex pt-20 pb-16 w-full h-full px-8">
         <div className="w-full max-w-4xl mx-auto">
           <h1 className="text-[24px] font-bold mb-6">
@@ -58,7 +58,7 @@ export default async function CollectionPage(props: CollectionPageProps) {
 }
 
 export async function generateMetadata(props: Metadata) {
-  const params = await props.params;
+  const params = props.params;
   const { slug } = params;
 
   const bookmarks = await getBookmarks();

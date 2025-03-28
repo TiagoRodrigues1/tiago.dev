@@ -15,7 +15,7 @@ async function fetchData() {
 export default async function BookmarksLayout({
   children,
 }: {
-  children: React.ReactNode;
+  readonly children: React.ReactNode;
 }) {
   const { bookmarks } = await fetchData();
 
