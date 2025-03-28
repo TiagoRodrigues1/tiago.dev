@@ -35,3 +35,4 @@ bun dev
 - [x] Fix bug that is showing the submit bookmark button while loading bookmarks
 - [ ] Make logic for the submit of the bookmarks (mb need be)
 - [ ] Check the images, warning (priority)
+- [ ] Maybe add back button when navigating from bookmarks to slug in mobile. Try to ddisplay the title and button

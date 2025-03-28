@@ -12,7 +12,7 @@ async function fetchData() {
 export default async function Bookmarks() {
   const { bookmarks } = await fetchData();
   return (
-    <div className="flex flex-col gap-2 text-sm mt-12">
+    <div className="flex flex-col gap-2 text-sm mt-12 lg:hidden">
       {bookmarks?.map((bookmark: BookmarkCollection) => {
         return (
           <ListItem
