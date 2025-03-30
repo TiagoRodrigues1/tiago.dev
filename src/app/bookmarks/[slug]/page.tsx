@@ -1,7 +1,7 @@
 import { BookmarkList } from "@/components/bookmark-list";
 import { LoadingSpinner } from "@/components/loading-spinner";
 import { getBookmarkItems, getBookmarks } from "@/lib/raindrop";
-import { BookmarkCollection, Metadata } from "@/lib/types";
+import { BookmarkCollection } from "@/lib/types";
 import { ScrollArea } from "@radix-ui/react-scroll-area";
 
 import { notFound } from "next/navigation";
@@ -57,7 +57,7 @@ export default async function CollectionPage(props: CollectionPageProps) {
   );
 }
 
-export async function generateMetadata(props: Metadata) {
+export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
   const params = await props.params;
   const { slug } = params;
 

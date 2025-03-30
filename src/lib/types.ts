@@ -75,11 +75,3 @@ export type Bookmarks = {
   result: boolean;
   count: number;
 };
-
-export type Metadata = {
-  params: MetadataBookmarks;
-};
-
-export type MetadataBookmarks = {
-  slug: string;
-};
