@@ -20,7 +20,7 @@ export default function Stack() {
                 <a
                   href={item.url}
                   target="_blank"
-                  className="link after:content-['_↗']"
+                  className="link after:content-['_↗'] hover:decoration-1 hover:underline flex no-wrap gap-1"
                 >
                   {item.title}
                 </a>
