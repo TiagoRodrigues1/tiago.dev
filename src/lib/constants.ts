@@ -79,6 +79,11 @@ export const STACK_ITEMS: StackItem[] = [
     url: "https://www.notion.com/",
     description: "Everyone know this one! :)",
   },
+  {
+    title: "Warp",
+    url: "https://www.warp.dev/",
+    description: "Been using warp terminal, for now I'm enjoying it."
+  }
 ];
 
 export const JOBS: Job[] = [
