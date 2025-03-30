@@ -1,4 +1,4 @@
-import { JourneyCard } from "@/components/journeyCard";
+import { JourneyCard } from "@/components/journey-card";
 import { JOURNEY_ITEMS } from "@/lib/constants";
 import { YearLog } from "@/lib/types";
 

@@ -1,5 +1,6 @@
 import { Bookmark } from "@/lib/types";
 import { Link2Icon } from "lucide-react";
+import { motion } from "framer-motion";
 
 type BookmarkCardProps = {
   bookmark: Bookmark;
@@ -11,12 +12,14 @@ export default function BookmarkCard(props: BookmarkCardProps) {
   const { order } = props;
 
   return (
-    <a
+    <motion.a
       href={`${link}?ref=tiago.dev`}
       target="_blank"
       rel="noopener noreferrer"
       data-bookmark-order={order}
       className="thumbnail-shadow flex aspect-auto min-w-0 cursor-pointer flex-col gap-2 overflow-hidden rounded-xl bg-sidebar p-4 transition-colors duration-300 hover:bg-[var(--sidebar-accent)]"
+      whileHover={{ scale: 1.05 }}
+      transition={{ duration: 0.3 }}
     >
       <span className="aspect-video overflow-hidden rounded-lg">
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -36,8 +39,10 @@ export default function BookmarkCard(props: BookmarkCardProps) {
           <Link2Icon size={16} />
           {domain}
         </span>
-        <span className="line-clamp-6 text-sm text-white">{excerpt || note}</span>
+        <span className="line-clamp-6 text-sm text-white">
+          {excerpt || note}
+        </span>
       </div>
-    </a>
+    </motion.a>
   );
 }
