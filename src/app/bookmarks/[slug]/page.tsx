@@ -58,7 +58,7 @@ export default async function CollectionPage(props: CollectionPageProps) {
 }
 
 export async function generateMetadata(props: Metadata) {
-  const params = props.params;
+  const params = await props.params;
   const { slug } = params;
 
   const bookmarks = await getBookmarks();

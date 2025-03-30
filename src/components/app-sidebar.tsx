@@ -1,5 +1,5 @@
 "use client";
-import { ArrowUpRight, Command } from "lucide-react";
+import { ArrowUpRight, Command, ArrowLeft } from "lucide-react";
 import { memo } from "react";
 
 import {
@@ -21,23 +21,42 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+const handleClick = (pathname: string) => {
+  console.log(pathname);
+  if (!pathname.startsWith("/bookmarks/")) return;
+  window.history.back();
+};
+
 export const AppSidebar = memo(function AppSidebar() {
   const pathname: string = usePathname();
+  const isBookmarkSlug = pathname.startsWith("/bookmarks/");
 
   return (
     <>
       {/* Mobile Topbar with Drawer */}
       <div className="md:hidden fixed top-0 left-0 right-0 z-10 shadow flex items-center justify-between pl-8 p-4">
         <Drawer>
-          <DrawerTrigger asChild>
+          {!isBookmarkSlug ? (
+            <DrawerTrigger asChild>
+              <button
+                type="button"
+                aria-label="Open menu"
+                className="text-white text-xs"
+              >
+                <Command />
+              </button>
+            </DrawerTrigger>
+          ) : (
             <button
               type="button"
-              aria-label="Open menu"
-              className="text-white font-xs"
+              aria-label="Go back"
+              className="text-white text-xs"
+              onClick={() => handleClick(pathname)}
             >
-              <Command />
+              <ArrowLeft />
             </button>
-          </DrawerTrigger>
+          )}
+
           <DrawerContent
             className="p-0"
             role="dialog"
@@ -118,7 +137,7 @@ export const AppSidebar = memo(function AppSidebar() {
         </Drawer>
       </div>
       {/* Desktop Sidebar */}
-      <nav className="hidden md:block w-64 bg-white border-r">
+      <div className="hidden md:block w-64 bg-white border-r">
         <Sidebar>
           <div className="text-sm">
             <SidebarHeader>
@@ -187,7 +206,7 @@ export const AppSidebar = memo(function AppSidebar() {
             </SidebarContent>
           </div>
         </Sidebar>
-      </nav>
+      </div>
     </>
   );
 });

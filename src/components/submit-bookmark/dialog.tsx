@@ -31,7 +31,7 @@ export function SubmitBookmarkDialog(props: SubmitBookmarkDialogProps) {
     <Dialog open={open} onOpenChange={setOpen}>
       <Suspense fallback={<LoadingSpinner />}>
         <DialogTrigger asChild>
-          <Button variant="secondary" size={"sm"}>
+          <Button variant="secondary" size={"sm"} className="z-10">
             <Send />
             Submit
           </Button>

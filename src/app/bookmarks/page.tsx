@@ -2,6 +2,9 @@ import { ListItem } from "@/components/list-item";
 import { getBookmarks } from "@/lib/raindrop";
 import { BookmarkCollection } from "@/lib/types";
 import { sortByProperty } from "@/lib/utils";
+import { SideMenuMob } from "@/components/side-menu-mob";
+import { Suspense } from "react";
+import { LoadingSpinner } from "@/components/loading-spinner";
 
 async function fetchData() {
   const bookmarks: BookmarkCollection[] = await getBookmarks();
@@ -11,18 +14,23 @@ async function fetchData() {
 
 export default async function Bookmarks() {
   const { bookmarks } = await fetchData();
+
   return (
-    <div className="flex flex-col gap-2 text-sm mt-12 lg:hidden">
-      {bookmarks?.map((bookmark: BookmarkCollection) => {
-        return (
-          <ListItem
-            title={bookmark.title}
-            description={`${bookmark.count} bookmarks`}
-            key={bookmark._id}
-            path={`/bookmarks/${bookmark.slug}`}
-          />
-        );
-      })}
-    </div>
+    <SideMenuMob bookmarks={bookmarks} title="Bookmarks">
+      <Suspense fallback={<LoadingSpinner />}>
+        <div className="flex flex-col gap-2 text-sm">
+          {bookmarks?.map((bookmark: BookmarkCollection) => {
+            return (
+              <ListItem
+                title={bookmark.title}
+                description={`${bookmark.count} bookmarks`}
+                key={bookmark._id}
+                path={`/bookmarks/${bookmark.slug}`}
+              />
+            );
+          })}
+        </div>
+      </Suspense>
+    </SideMenuMob>
   );
 }

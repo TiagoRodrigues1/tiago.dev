@@ -7,6 +7,7 @@ export const metadata = {
 };
 
 export default function Journey() {
+
   return (
     <div className="flex pt-20 pb-16 w-full h-full px-8">
       <div className="w-full max-w-4xl mx-auto">
@@ -20,7 +21,7 @@ export default function Journey() {
             <section>
               {yearLog.logs.map((log, logIndex) => (
                 <div
-                  key={`data_${itemIndex}_log_${logIndex}`}
+                  key={`data_${itemIndex}_log_${logIndex}_${log.title}`}
                   className="relative flex pb-8 last:pb-0"
                 >
                   {logIndex !== yearLog.logs.length - 1 && (
