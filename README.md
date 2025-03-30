@@ -8,7 +8,6 @@ pnpm dev
 bun dev
 ```
 
-
 # TODO
 
 - [x] Try to use useMemo on sidebar.tsx
@@ -34,5 +33,5 @@ bun dev
 - [x] add the submit form on the bookmarks
 - [x] Fix bug that is showing the submit bookmark button while loading bookmarks
 - [ ] Make logic for the submit of the bookmarks (mb need be)
-- [ ] Check the images, warning (priority)
+- [x] Check the images, warning (priority)
 - [x] Maybe add back button when navigating from bookmarks to slug in mobile. Try to ddisplay the title and button

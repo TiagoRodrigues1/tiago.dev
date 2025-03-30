@@ -4,7 +4,7 @@ import {
   Github,
   Linkedin,
   WandSparkles,
-  ScrollText,
+  FileText,
   Bookmark,
 } from "lucide-react";
 
@@ -19,7 +19,7 @@ export const BAR_ITEMS: SidebarMenuItem[] = [
   {
     title: "CV",
     url: "/cv",
-    icon: ScrollText,
+    icon: FileText,
   },
   {
     title: "Journey",
@@ -86,7 +86,7 @@ export const JOBS: Job[] = [
     company: "Mobileum",
     startDate: "October 2021",
     endDate: undefined,
-    role: "Software Engineer @ Mobileum",
+    role: "Fullstack Software Engineer @ Mobileum",
     achievments: [
       "Migrated legacy JavaScript modules from node 12 to node 20+ and upgraded Webpack to version 5, ensuring better performance and maintainability.",
       "Integrated the front-end team for 1 year where I contributed to a complete front-end overhaul using React, improving UI performance by 40%, reducing issues by 10%, and delivering a cleaner, more modern user experience.",

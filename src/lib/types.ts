@@ -45,8 +45,6 @@ export type JourneyCardItem = {
   title: string;
   description: string;
   image?: ImageType;
-  index: number;
-  priority?: boolean;
 };
 
 export type BookmarkObject = {

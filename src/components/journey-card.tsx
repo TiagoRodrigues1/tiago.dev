@@ -7,7 +7,7 @@ import { JourneyCardItem } from "@/lib/types";
 export const JourneyCard = memo(function JourneyCard(
   cardData: JourneyCardItem
 ) {
-  const { title, description, image, index, priority } = cardData;
+  const { title, description, image} = cardData;
   return (
     <div className="word-break-word flex flex-col">
       <span className="mb-px font-semibold tracking-tight text-[var(--color-white)]">
@@ -21,9 +21,8 @@ export const JourneyCard = memo(function JourneyCard(
             alt={image.title ?? image.description ?? ""}
             width={image.width}
             height={image.height}
-            className="animate-reveal"
-            loading={index < 1 ? "eager" : "lazy"}
-            priority={priority}
+            className="animate-reveal w-auto h-auto"
+            priority={true}
           />
         </div>
       )}
