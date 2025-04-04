@@ -16,7 +16,7 @@ export default function Stack() {
         <ul className="mb-4 flex list-disc flex-col gap-0.5 pl-6 ">
           {STACK_ITEMS.map((item: StackItem, idx: number) => {
             return (
-              <li className="flex stack" key={idx}>
+              <li className="flex stack" key={`${idx}${item.title}`}>
                 <a
                   href={item.url}
                   target="_blank"

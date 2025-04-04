@@ -225,3 +225,21 @@ h4 {
 .m-0 {
   margin: 0;
 }
+
+@utility thumbnail-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  50% { transform: rotate(10deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.rotate-icon {
+  transition: transform 0.5s;
+}
+
+.menu-item:hover .rotate-icon {
+  animation: rotate 0.5s;
+}

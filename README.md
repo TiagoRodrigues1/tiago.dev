@@ -35,4 +35,6 @@ bun dev
 - [ ] Make logic for the submit of the bookmarks (mb need be)
 - [x] Check the images, warning (priority)
 - [x] Maybe add back button when navigating from bookmarks to slug in mobile. Try to ddisplay the title and button
-- [ ] Add gh action on mais push, build.
+- [x] Add gh action on mais push, build.
+- [ ] Deploy w/ vercel
+- [ ] Icon animation when hovering

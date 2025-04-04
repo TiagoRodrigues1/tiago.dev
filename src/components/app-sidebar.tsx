@@ -92,10 +92,10 @@ export const AppSidebar = memo(function AppSidebar() {
                       {BAR_ITEMS.map((item) => {
                         const isActive = pathname === item.url;
                         return (
-                          <MemoizedSidebarMenuItem key={item.title}>
+                          <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                             <SidebarMenuButton asChild isActive={isActive}>
                               <Link href={item.url}>
-                                <item.icon size={16} />
+                                <item.icon size={16} className="rotate-icon" />
                                 <span>{item.title}</span>
                               </Link>
                             </SidebarMenuButton>
@@ -112,7 +112,7 @@ export const AppSidebar = memo(function AppSidebar() {
                   <SidebarGroupContent>
                     <SidebarMenu>
                       {SOCIALS.map((item) => (
-                        <MemoizedSidebarMenuItem key={item.title}>
+                        <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                           <SidebarMenuButton asChild>
                             <a
                               href={item.url}
@@ -120,7 +120,7 @@ export const AppSidebar = memo(function AppSidebar() {
                               className="flex items-center justify-between gap-2 p-2 hover:bg-gray-200"
                             >
                               <span className="inline-flex items-center gap-2">
-                                <item.icon size={16} />
+                                <item.icon size={16} className="rotate-icon"/>
                                 <span>{item.title}</span>
                               </span>
                               <ArrowUpRight size={16} />
@@ -163,10 +163,10 @@ export const AppSidebar = memo(function AppSidebar() {
                     {BAR_ITEMS.map((item) => {
                       const isActive = pathname === item.url;
                       return (
-                        <MemoizedSidebarMenuItem key={item.title}>
+                        <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                           <SidebarMenuButton asChild isActive={isActive}>
                             <a href={item.url}>
-                              <item.icon size={16} />
+                              <item.icon size={16} className="rotate-icon"/>
                               <span>{item.title}</span>
                             </a>
                           </SidebarMenuButton>
@@ -184,7 +184,7 @@ export const AppSidebar = memo(function AppSidebar() {
                 <SidebarGroupContent>
                   <SidebarMenu>
                     {SOCIALS.map((item) => (
-                      <MemoizedSidebarMenuItem key={item.title}>
+                      <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                         <SidebarMenuButton asChild>
                           <a
                             href={item.url}
@@ -192,7 +192,7 @@ export const AppSidebar = memo(function AppSidebar() {
                             className="flex items-center justify-between gap-2 p-2 hover:bg-gray-200"
                           >
                             <span className="inline-flex items-center gap-2">
-                              <item.icon size={16} />
+                              <item.icon size={16} className="rotate-icon"/>
                               <span>{item.title}</span>
                             </span>
                             <ArrowUpRight size={16} />
