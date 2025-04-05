@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  transpilePackages: ["geist"],
+  transpilePackages: ["geist", "react-tweet"],
   images: {
     remotePatterns: [
       {

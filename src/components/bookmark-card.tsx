@@ -1,15 +1,26 @@
 import { Bookmark } from "@/lib/types";
 import { Link2Icon } from "lucide-react";
 import { motion } from "framer-motion";
+import { TWEETS_COLLECTION_ID } from "@/lib/constants";
+import { TweetCard } from "./tweets/tweet-card";
 
 type BookmarkCardProps = {
-  bookmark: Bookmark;
-  order: number;
+  readonly bookmark: Bookmark;
+  readonly order: number;
 };
 
 export default function BookmarkCard(props: BookmarkCardProps) {
-  const { link, title, excerpt, cover, domain, note } = props.bookmark;
+  const { link, title, excerpt, cover, domain, note, collectionId } =
+    props.bookmark;
   const { order } = props;
+  
+  if (link && collectionId === TWEETS_COLLECTION_ID) {
+    const match = /\/status\/(\d+)/.exec(link) ?? [];
+    console.log(match);
+    const tweetId = match[1];
+
+    return <TweetCard id={tweetId} />;
+  }
 
   return (
     <motion.a

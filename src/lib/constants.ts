@@ -82,8 +82,8 @@ export const STACK_ITEMS: StackItem[] = [
   {
     title: "Warp",
     url: "https://www.warp.dev/",
-    description: "Been using warp terminal, for now I'm enjoying it."
-  }
+    description: "Been using warp terminal, for now I'm enjoying it.",
+  },
 ];
 
 export const JOBS: Job[] = [
@@ -141,7 +141,7 @@ export const JOURNEY_ITEMS: YearLog[] = [
           url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV222BCx6voVw7hWFQzNXqevDfZ9BdiSjPkLxGY",
           width: 620,
           height: 620,
-          title: "budapeste parlament"
+          title: "budapeste parlament",
         },
       },
       {
@@ -192,3 +192,5 @@ export const SUMBIT_FORM_TYPE = "Type";
 export const SUBMIT_FORM_TILTE = "Submit a bookmark";
 export const SUBMIT_FORM_DESCRIPTION =
   "Send a website, or something you like if I like it, I'll add it here. Please don't submit more than 5 a day.";
+
+export const TWEETS_COLLECTION_ID: number = 53584229;

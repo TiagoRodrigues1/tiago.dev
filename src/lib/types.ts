@@ -68,6 +68,7 @@ export type Bookmark = {
   _id: number;
   note?: string;
   domain: string;
+  collectionId: number;
 };
 
 export type Bookmarks = {

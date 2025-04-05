@@ -37,4 +37,7 @@ bun dev
 - [x] Maybe add back button when navigating from bookmarks to slug in mobile. Try to ddisplay the title and button
 - [x] Add gh action on mais push, build.
 - [ ] Deploy w/ vercel
-- [ ] Icon animation when hovering
+- [x] Icon animation when hovering
+- [ ] check potential bug when listing bookmarks the first time. Seems like loading not displaying
+- [x] tweets card
+- [ ] When loading tweets first time seems kind of weird - not 100%
