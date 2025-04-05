@@ -8,6 +8,7 @@ import { getBookmarkItemsByPageIndex } from "@/app/actions";
 import { Bookmarks, Bookmark } from "@/lib/types";
 import { cn } from "@/lib/utils";
 import BookmarkCard from "./bookmark-card";
+import { TWEETS_COLLECTION_ID } from "@/lib/constants";
 
 type BookmarkListProps = {
   initialData: Bookmarks;
@@ -23,11 +24,14 @@ export const BookmarkList = (props: BookmarkListProps) => {
   const [pageIndex, setPageIndex] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
+  const isTweetCollection: boolean = id === TWEETS_COLLECTION_ID;
+
   const isReachingEnd = data.length >= (initialData?.count ?? 0);
 
   const loadMore = () => {
-    if (!isReachingEnd && !isLoading)
+    if (!isReachingEnd && !isLoading) {
       setPageIndex((prevPageIndex) => prevPageIndex + 1);
+    }
   };
 
   const fetchInfiniteData = useCallback(async () => {
@@ -43,20 +47,20 @@ export const BookmarkList = (props: BookmarkListProps) => {
     if (pageIndex > 0) fetchInfiniteData();
   }, [pageIndex, fetchInfiniteData]);
 
-  const memoizedBookmarks = useMemo(
-    () => {
-      return data.map((bookmark: Bookmark, bookmarkIndex: number) => (
-        <div key={`bookmark${bookmarkIndex}${bookmark.title}`} className={cn("grid gap-4")}>
-          <BookmarkCard
-            key={bookmark._id}
-            bookmark={bookmark}
-            order={bookmarkIndex}
-          />
-        </div>
-      ));
-    },
-    [data] /* TODO add tweets*/
-  );
+  const memoizedBookmarks = useMemo(() => {
+    return data.map((bookmark: Bookmark, bookmarkIndex: number) => (
+      <div
+        key={`bookmark${bookmarkIndex}${bookmark.title}`}
+        className={cn("grid gap-4", isTweetCollection ? 'h-fit' : 'place-content-start')}
+      >
+        <BookmarkCard
+          key={bookmark._id}
+          bookmark={bookmark}
+          order={bookmarkIndex}
+        />
+      </div>
+    ));
+  }, [data, isTweetCollection]);
 
   return (
     <div>
@@ -66,7 +70,7 @@ export const BookmarkList = (props: BookmarkListProps) => {
         <div className="mt-8 flex min-h-16 items-center justify-center text-sm lg:mt-12">
           {!isReachingEnd ? (
             <>
-              {isLoading ? (
+              {isLoading ? ( // Show loading spinner when isLoading is true
                 <div
                   className="inline-block size-4 animate-spin rounded-full border-2 border-current border-t-transparent text-black"
                   aria-label="loading"

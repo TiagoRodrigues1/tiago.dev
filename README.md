@@ -38,6 +38,6 @@ bun dev
 - [x] Add gh action on mais push, build.
 - [ ] Deploy w/ vercel
 - [x] Icon animation when hovering
-- [ ] check potential bug when listing bookmarks the first time. Seems like loading not displaying
+- [x] check potential bug when listing bookmarks the first time. Seems like loading not displaying
 - [x] tweets card
-- [ ] When loading tweets first time seems kind of weird - not 100%
+- [x] When loading tweets first time seems kind of weird - not 100%

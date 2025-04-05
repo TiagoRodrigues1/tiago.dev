@@ -3,11 +3,14 @@
 }
 
 .p-4 {
-  padding: calc(var(--spacing) * 4)
+  padding: calc(var(--spacing) * 4);
 }
 
 .tweetCard :global(.react-tweet-theme) {
-  @apply max-w-[0px] min-w-full border-0 border-none;
+  border-width: 0;
+  border: 0;
+  max-width: 0;
+  min-width: 100%;
   --tweet-container-margin: 0;
   --tweet-body-font-size: 1rem;
   --tweet-body-line-height: 1.5rem;
@@ -19,85 +22,96 @@
   --tweet-bg-color-hover: var(--sidebar);
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-container_article__'] {
-  padding: calc(var(--spacing) * 4)
+.tweetCard :global(.react-tweet-theme) [class^="tweet-container_article__"] {
+  padding: calc(var(--spacing) * 4);
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-header_follow__'],
-.tweetCard :global(.react-tweet-theme) [class^='tweet-header_authorLinkText__'] {
-  font-weight:600;
+.tweetCard :global(.react-tweet-theme) [class^="tweet-header_follow__"],
+.tweetCard
+  :global(.react-tweet-theme)
+  [class^="tweet-header_authorLinkText__"] {
+  font-weight: 600;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-replies_replies__'],
-.tweetCard :global(.react-tweet-theme) [class^='tweet-info_infoLink__'],
-.tweetCard :global(.react-tweet-theme) [class^='tweet-header_authorFollow__'] {
-  display:none;
+.tweetCard :global(.react-tweet-theme) [class^="tweet-replies_replies__"],
+.tweetCard :global(.react-tweet-theme) [class^="tweet-info_infoLink__"],
+.tweetCard :global(.react-tweet-theme) [class^="tweet-header_authorFollow__"] {
+  display: none;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-header_author__'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-header_author__"] {
   margin-right: calc(var(--spacing) * 2);
   margin-left: calc(var(--spacing) * 2);
   display: flex;
   justify-content: start;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-info_info__'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-info_info__"] {
   margin-top: calc(var(--spacing));
   margin-bottom: calc(var(--spacing) * 3);
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_likeCount__'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_likeCount__"] {
   margin: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_actions__'] {
-  flex-wrap:wrap;
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_actions__"] {
+  flex-wrap: wrap;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_like__'],
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_reply__'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_like__"],
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_reply__"] {
   margin-right: calc(var(--spacing) * 3);
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_copy__'] {
-  margin-right:0;
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_copy__"] {
+  margin-right: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-header_avatar__'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-header_avatar__"] {
   aspect-ratio: 1/1;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-header_avatarOverflow__'] > img {
-  border-width:0;
+.tweetCard
+  :global(.react-tweet-theme)
+  [class^="tweet-header_avatarOverflow__"]
+  > img {
+  border-width: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='quoted-tweet-container_root'] {
+.tweetCard :global(.react-tweet-theme) [class^="quoted-tweet-container_root"] {
   margin-top: calc(var(--spacing) * 4);
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='quoted-tweet-container_root__'] {
-  padding: calc(var(--spacing) * 4)
+.tweetCard
+  :global(.react-tweet-theme)
+  [class^="quoted-tweet-container_root__"] {
+  padding: calc(var(--spacing) * 4);
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='quoted-tweet-body_root__'],
-.tweetCard :global(.react-tweet-theme) [class^='quoted-tweet-header_header___'] {
-  padding-right:0;
-  padding-left:0;
+.tweetCard :global(.react-tweet-theme) [class^="quoted-tweet-body_root__"],
+.tweetCard
+  :global(.react-tweet-theme)
+  [class^="quoted-tweet-header_header___"] {
+  padding-right: 0;
+  padding-left: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='quoted-tweet-header_header___'] {
-  padding-top:0;
+.tweetCard
+  :global(.react-tweet-theme)
+  [class^="quoted-tweet-header_header___"] {
+  padding-top: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_replyText__'],
-.tweetCard :global(.react-tweet-theme) [class^='tweet-actions_copyText__'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_replyText__"],
+.tweetCard :global(.react-tweet-theme) [class^="tweet-actions_copyText__"] {
   margin-left: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-not-found_root'] {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-not-found_root"] {
   padding-bottom: 0;
 }
 
-.tweetCard :global(.react-tweet-theme) [class^='tweet-not-found_root'] > p {
+.tweetCard :global(.react-tweet-theme) [class^="tweet-not-found_root"] > p {
   margin-bottom: 0;
 }
