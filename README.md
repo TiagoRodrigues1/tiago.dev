@@ -15,7 +15,7 @@ bun dev
 - [x] Change favicon
 - [x] Change chrome tab name
 - [x] Add drawer for mobile
-- [ ] Missing image for portfolio when done
+- [x] Missing image for portfolio when done
 - [x] Fix aria-hidden bug
 - [x] Bookmarks
 - [x] Put all data in a data file
