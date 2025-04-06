@@ -2,10 +2,6 @@ import { JourneyCard } from "@/components/journey-card";
 import { JOURNEY_ITEMS } from "@/lib/constants";
 import { YearLog } from "@/lib/types";
 
-export const metadata = {
-  title: "Journey",
-};
-
 export default function Journey() {
   return (
     <div className="flex pt-20 pb-16 w-full h-full px-8">
@@ -42,4 +38,20 @@ export default function Journey() {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata() {
+  const title = "Journey";
+  const siteUrl = "/journey";
+
+  return {
+    title,
+    openGraph: {
+      title,
+      url: siteUrl,
+    },
+    alternates: {
+      canonical: siteUrl,
+    },
+  };
 }

@@ -128,6 +128,12 @@ export const JOURNEY_ITEMS: YearLog[] = [
       {
         title: "New UI for my portfolio",
         description: "Gave it a new minimalist look, using mainly shadcn",
+        image: {
+          url: "https://u73kp26vd1.ufs.sh/f/3FmnM8A0jrV2graO07jCTEMZqPc432o8rd6JGwWhHFB5DeUu",
+          width: 620,
+          height: 620,
+          title: "New ui for my portfolio",
+        },
       },
     ],
   },

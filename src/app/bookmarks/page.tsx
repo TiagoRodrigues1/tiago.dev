@@ -34,3 +34,19 @@ export default async function Bookmarks() {
     </SideMenuMob>
   );
 }
+
+export async function generateMetadata() {
+  const title = "Bookmarks";
+  const siteUrl = "/bookmarks";
+
+  return {
+    title,
+    openGraph: {
+      title,
+      url: siteUrl,
+    },
+    alternates: {
+      canonical: siteUrl,
+    },
+  };
+}

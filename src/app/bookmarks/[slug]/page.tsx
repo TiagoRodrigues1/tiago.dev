@@ -18,12 +18,9 @@ async function fetchData(slug: string) {
   const bookmarks: BookmarkCollection[] = await getBookmarks();
 
   const currentBookmark = bookmarks.find((bookmark) => bookmark.slug === slug);
-  if (!currentBookmark) {
-    notFound();
-  }
+  if (!currentBookmark) notFound();
 
   const bookmarkItems = await getBookmarkItems(currentBookmark._id);
-
   return { bookmarkItems, currentBookmark };
 }
 
@@ -57,7 +54,9 @@ export default async function CollectionPage(props: CollectionPageProps) {
   );
 }
 
-export async function generateMetadata(props: { params: Promise<{ slug: string }> }) {
+export async function generateMetadata(props: {
+  params: Promise<{ slug: string }>;
+}) {
   const params = await props.params;
   const { slug } = params;
 
@@ -66,7 +65,17 @@ export async function generateMetadata(props: { params: Promise<{ slug: string }
 
   if (!currentBookmark) return null;
 
+  const title = `${currentBookmark.title} | Bookmarks`;
+  const siteUrl = `/bookmarks/${slug}`;
+
   return {
-    title: `${currentBookmark.title} | Bookmarks`,
+    title,
+    openGraph: {
+      title,
+      url: siteUrl,
+    },
+    alternates: {
+      canonical: siteUrl,
+    },
   };
 }

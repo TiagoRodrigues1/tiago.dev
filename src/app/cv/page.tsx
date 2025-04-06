@@ -1,10 +1,6 @@
 import { JOBS } from "@/lib/constants";
 import { Job } from "@/lib/types";
 
-export const metadata = {
-  title: "CV",
-};
-
 export default function CV() {
   return (
     <div className="flex pt-20 pb-16 w-full h-full px-8">
@@ -13,7 +9,9 @@ export default function CV() {
         {JOBS.map((job: Job, index) => {
           return (
             <div key={`${job.role}-${index}`}>
-              <span className="font-bold mb-1 text-[var(--color-white)]">{job.role}</span>
+              <span className="font-bold mb-1 text-[var(--color-white)]">
+                {job.role}
+              </span>
               <p className="text-[var(--color-white)]">
                 {job.startDate}{" "}
                 {job.endDate ? ` — ${job.endDate}` : " — Present"}
@@ -40,4 +38,20 @@ export default function CV() {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata() {
+  const title = "CV";
+  const siteUrl = "/cv";
+
+  return {
+    title,
+    openGraph: {
+      title,
+      url: siteUrl,
+    },
+    alternates: {
+      canonical: siteUrl,
+    },
+  };
 }

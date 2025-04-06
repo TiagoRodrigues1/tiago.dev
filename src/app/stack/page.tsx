@@ -1,10 +1,6 @@
 import { STACK_ITEMS } from "@/lib/constants";
 import { StackItem } from "@/lib/types";
 
-export const metadata = {
-  title: "Stack",
-};
-
 export default function Stack() {
   return (
     <div className="flex pt-20 pb-16 w-full h-full px-8">
@@ -32,4 +28,20 @@ export default function Stack() {
       </div>
     </div>
   );
+}
+
+export async function generateMetadata() {
+  const title = "Stack";
+  const siteUrl = "/stack";
+
+  return {
+    title,
+    openGraph: {
+      title,
+      url: siteUrl,
+    },
+    alternates: {
+      canonical: siteUrl,
+    },
+  };
 }
