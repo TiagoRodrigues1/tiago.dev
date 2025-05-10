@@ -114,7 +114,7 @@ export const AppSidebar = memo(function AppSidebar() {
                       {SOCIALS.map((item) => (
                         <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                           <SidebarMenuButton asChild>
-                            <a
+                            <Link
                               href={item.url}
                               target="_blank"
                               className="flex items-center justify-between gap-2 p-2 hover:bg-gray-200"
@@ -124,7 +124,7 @@ export const AppSidebar = memo(function AppSidebar() {
                                 <span>{item.title}</span>
                               </span>
                               <ArrowUpRight size={16} />
-                            </a>
+                            </Link>
                           </SidebarMenuButton>
                         </MemoizedSidebarMenuItem>
                       ))}
@@ -165,10 +165,10 @@ export const AppSidebar = memo(function AppSidebar() {
                       return (
                         <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                           <SidebarMenuButton asChild isActive={isActive}>
-                            <a href={item.url}>
+                            <Link href={item.url}>
                               <item.icon size={16} className="rotate-icon"/>
                               <span>{item.title}</span>
-                            </a>
+                            </Link>
                           </SidebarMenuButton>
                         </MemoizedSidebarMenuItem>
                       );
@@ -186,7 +186,7 @@ export const AppSidebar = memo(function AppSidebar() {
                     {SOCIALS.map((item) => (
                       <MemoizedSidebarMenuItem key={item.title} className="menu-item">
                         <SidebarMenuButton asChild>
-                          <a
+                          <Link
                             href={item.url}
                             target="_blank"
                             className="flex items-center justify-between gap-2 p-2 hover:bg-gray-200"
@@ -196,7 +196,7 @@ export const AppSidebar = memo(function AppSidebar() {
                               <span>{item.title}</span>
                             </span>
                             <ArrowUpRight size={16} />
-                          </a>
+                          </Link>
                         </SidebarMenuButton>
                       </MemoizedSidebarMenuItem>
                     ))}
