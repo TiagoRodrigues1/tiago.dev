@@ -8,7 +8,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export const sortByProperty = cache(
   <T extends Record<K, string>, K extends keyof T>(arr: T[], prop: K) => {
-    return arr.sort((a, b) => {
+    return [...arr].sort((a, b) => {
       const itemA = a[prop].toUpperCase();
       const itemB = b[prop].toUpperCase();
 
